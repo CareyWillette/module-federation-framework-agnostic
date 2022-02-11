@@ -2,6 +2,7 @@
   "version": "0.0.1",
   "npmClient": "yarn",
   "packages": [
+    "projects/mfe1",
     "projects/shell"
   ]
 }
