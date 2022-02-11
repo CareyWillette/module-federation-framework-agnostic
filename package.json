@@ -4,9 +4,10 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --stream",
-    "clean-install-all": "yarn run remove-node-modules && rm -rf node_modules && yarn && yarn run bootstrap",
-    "clean-install": "yarn run remove-node-modules && yarn run bootstrap",
-    "remove-node-modules": "cd ./projects && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+    "clean-install:all": "yarn run remove-node-modules:all && yarn && yarn run bootstrap",
+    "clean-install:workspaces": "yarn run remove-node-modules:workspaces && yarn run bootstrap",
+    "remove-node-modules:all": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "remove-node-modules:workspaces": "cd ./projects && find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
   },
   "private": true,
   "devDependencies": {
